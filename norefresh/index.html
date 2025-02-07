@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Página sem Refresh</title>
+    <style>
+        #conteudoA {
+            display: block;
+        }
+
+        #conteudoB, #conteudoC {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Javascript</h1>
+        <h2>Carregamento sem Refresh</h2>
+    </header>
+
+    <nav>
+        <button onclick="mostrarEsconder('conteudoA')">Link A</button>
+        <button onclick="mostrarEsconder('conteudoB')">Link B</button>
+        <button onclick="mostrarEsconder('conteudoC')">Link C</button>
+    </nav>
+
+    <main>
+
+        <section id="conteudoA">
+            <h2>Conteúdo do Link A</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae vel aspernatur iusto libero ratione, est possimus voluptatibus cupiditate! Accusamus rerum illum odit sit doloribus eligendi temporibus perspiciatis, voluptatibus corporis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aperiam velit possimus ab illo sed fuga autem dolorum soluta omnis nam corrupti deleniti voluptate et saepe provident sapiente dolor doloribus!</p>
+        </section>
+
+        <section id="conteudoB">
+            <h2>Conteúdo do Link B</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nesciunt. Aut tenetur minima ratione, maxime quasi debitis quam id quos quidem libero nam sint, ut enim earum laboriosam praesentium sequi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis consectetur repudiandae autem alias, numquam illum, ipsum atque, possimus perferendis sed nemo! Vel iste id magni totam ratione alias enim veniam?</p>
+        </section>
+
+        <section id="conteudoC">
+            <h2>Conteúdo do Link C</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem reiciendis, pariatur accusamus, autem cumque veritatis dolorum unde harum nostrum laudantium, reprehenderit itaque voluptas ex nesciunt temporibus. Aut hic magni esse.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod numquam inventore pariatur error! Tempora a assumenda voluptatibus totam eaque odio, quia voluptas, optio perspiciatis reprehenderit rerum esse nemo labore! Quo!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <address>
+            <p>Material de Aula do Canal Tempos Esquisitos</p>
+            <p>Desenvolvido por Luis Vulcanis &copy; 2025</p>
+        </address>
+    </footer>
+
+    <script>
+        function mostrarEsconder(id) {
+            let sections = document.querySelectorAll('section');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
